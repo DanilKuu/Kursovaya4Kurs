@@ -16,8 +16,8 @@ def print_confusion_matrix(func):
         result = func(photos_dir, photos_per_class)
         print("\nConfusion Matrix:")
         print(f"            Predicted: full     Predicted: empty")
-        print(f"Actual: full       {result['full']}              {photos_per_class - result['full']}")
-        print(f"Actual: empty      {photos_per_class - result['empty']}              {result['empty']}")
+        print(f"Actual: full       {result['full']}              {photos_per_class - result['empty']}")
+        print(f"Actual: empty      {photos_per_class - result['full']}              {result['empty']}")
         return result
     return wrapper
 
